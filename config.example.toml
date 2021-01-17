@@ -1,0 +1,38 @@
+# This file contains:
+#
+# ```
+#    base          = ""
+#    client_id     = ""
+#    client_secret = ""
+#    redirect      = ""
+#    token         = ""
+# ```
+#
+mastodon_data = "./mastodon-data.toml"
+
+# Path to the repository to update
+repository_path = "/tmp/test-repo"
+
+# the name of the master branch
+master_branch_name = "master"
+
+# the name of the upstream remote
+origin_remote_name = "origin"
+
+# How many hours to go back
+hours_to_check = 24
+
+# ISO 639-1 code of the language the post is written in (required for mastodon)
+status_language = "en"
+
+# Template.
+# Available variables:
+#  - commits
+#  - merges
+#  - nonmerges
+#
+status_template = ''
+    In the last 24 hours, there were {{commits}} on master of TEST REPO,
+    of which {{merges}} were merges and {{nonmerges}} were direct (and thus potentially breaking) commits to the master branch.
+''
+
